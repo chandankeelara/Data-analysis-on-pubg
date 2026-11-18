@@ -1,0 +1,62 @@
+{
+  "data": {
+    "cleaning": {
+      "rows_in": 4446966,
+      "rows_out": 4446965,
+      "steps": {
+        "null_target": 1,
+        "single_place_match": 0,
+        "unknown_match_type": 0
+      }
+    },
+    "train_anomalies_removed": 1339,
+    "test_players": 889723,
+    "train_teams": 1620636,
+    "test_teams": 405857,
+    "features": 83
+  },
+  "test_mae_player_weighted": {
+    "baseline_mean": 0.2679,
+    "baseline_killPlace_rank": 0.1264,
+    "ridge": 0.0468,
+    "ridge_rank_adjusted": 0.0451,
+    "lightgbm": 0.0283,
+    "lightgbm_rank_adjusted": 0.0259
+  },
+  "test_r2": {
+    "ridge": 0.9513,
+    "lightgbm": 0.9799
+  },
+  "lightgbm_best_iteration": 3000,
+  "best_model_mae_by_match_type": {
+    "duo": 0.0275,
+    "event": 0.0343,
+    "solo": 0.0321,
+    "squad": 0.0231
+  },
+  "top_features_by_gain": {
+    "killPlace_max_rank": 0.3846,
+    "walkDistance_mean_rank": 0.1479,
+    "walkDistance_max_rank": 0.13,
+    "killPlace_max": 0.0461,
+    "killPlace_mean_rank": 0.0312,
+    "totalDistance_mean_rank": 0.0165,
+    "totalDistance_max_rank": 0.0152,
+    "killPlace_mean": 0.0124,
+    "groupSize": 0.0121,
+    "killPlace_min": 0.0115
+  },
+  "top_spearman_with_target": {
+    "walkDistance_mean_rank": 0.9296,
+    "walkDistance_max_rank": 0.9293,
+    "totalDistance_mean_rank": 0.9152,
+    "totalDistance_max_rank": 0.9109,
+    "killPlace_max_rank": -0.8462,
+    "killPlace_mean_rank": -0.8062,
+    "boosts_mean_rank": 0.7534,
+    "weaponsAcquired_mean_rank": 0.7504,
+    "healsAndBoosts_mean_rank": 0.7481,
+    "boosts_max_rank": 0.7445
+  },
+  "runtime_seconds": 1414.6
+}
